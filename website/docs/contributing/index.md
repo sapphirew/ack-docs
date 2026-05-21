@@ -40,6 +40,18 @@ The [ack-dev-skills](https://github.com/aws-controllers-k8s/ack-dev-skills) proj
 
 If you use AI coding tools (Claude Code, Kiro, Cursor, etc.), installing this skill will significantly improve the quality of AI-assisted ACK development work. See the [ack-dev-skills README](https://github.com/aws-controllers-k8s/ack-dev-skills) for installation instructions.
 
+## Documenting Breaking Changes
+
+If your PR introduces a breaking change (e.g., changing a default value, removing a flag, altering reconciliation behavior), you must update the [Breaking Changes](/docs/breaking-changes) page.
+
+Add an entry with:
+- A clear description of what is changing
+- Timeline (if phased rollout)
+- Who is affected
+- Action required for users to migrate
+
+This ensures users are informed before upgrading their controllers.
+
 ## Community
 
 - [GitHub Issues](https://github.com/aws-controllers-k8s/community/issues) — Bug reports and feature requests
