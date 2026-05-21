@@ -111,6 +111,30 @@ const sidebars: SidebarsConfig = {
         'guides/performance',
       ],
     },
+    {
+      type: 'category',
+      label: 'Contributing',
+      collapsed: true,
+      items: [
+        'contributing/index',
+        'contributing/setup',
+        'contributing/code-organization',
+        'contributing/building-controller',
+        {
+          type: 'category',
+          label: 'Code Generation',
+          collapsed: true,
+          items: [
+            'contributing/code-generation/overview',
+            'contributing/code-generation/configuration',
+            'contributing/code-generation/hooks',
+            'contributing/code-generation/field-config',
+          ],
+        },
+        'contributing/testing',
+        'contributing/releasing',
+      ],
+    },
   ],
 };
 
