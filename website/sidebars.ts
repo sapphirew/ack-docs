@@ -29,7 +29,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'getting-started-eks',
           label: 'Using EKS Capabilities',
-          className: 'sidebar-item-new',
         },
         {
           type: 'doc',
@@ -81,7 +80,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'guides/cross-account',
           label: 'Granular IAM Roles',
-          className: 'sidebar-item-new',
         },
         {
           type: 'doc',
@@ -97,7 +95,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'guides/kro',
           label: 'Using ACK with kro',
-          className: 'sidebar-item-new',
         },
       ],
     },
@@ -114,6 +111,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Contributing',
+      className: 'sidebar-category-new',
       collapsed: true,
       items: [
         'contributing/index',
@@ -134,6 +132,12 @@ const sidebars: SidebarsConfig = {
         'contributing/testing',
         'contributing/releasing',
       ],
+    },
+    {
+      type: 'doc',
+      id: 'breaking-changes',
+      label: 'Breaking Changes',
+      className: 'sidebar-item-new',
     },
   ],
 };

@@ -284,6 +284,17 @@ serviceAccount:
 
 For cross-account resource management, use the **IAMRoleSelector** feature gate (recommended) or CARM feature gates. See [Granular IAM Roles](/guides/cross-account) for setup instructions.
 
+## Cross-Namespace References
+
+### `enableCrossNamespace`
+- **Type**: Boolean
+- **Default**: `true`
+- **Description**: Enable cross-namespace behavior including resource references (`*Ref` fields), secret references (`SecretKeyReference`), and `FieldExport` targets. When `false`, the controller rejects any operation that crosses namespace boundaries. Maps to the `--enable-cross-namespace` controller flag.
+
+:::warning
+The default for `enableCrossNamespace` will change from `true` to `false` in a future release. If you rely on cross-namespace references, explicitly set `enableCrossNamespace: true` before upgrading. See [Breaking Changes](/breaking-changes) for details.
+:::
+
 ## Feature Gates
 
 Feature gates allow you to enable experimental or optional controller features.

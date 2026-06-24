@@ -108,7 +108,9 @@ spec:
 
 ## Security Considerations
 
-`FieldExport` only exports fields from resources in the **same namespace** as the `FieldExport` resource. This prevents users from exporting fields from resources they don't have access to in other namespaces.
+By default, `FieldExport` can target a ConfigMap or Secret in a different namespace than the source resource. This cross-namespace behavior is gated by the `enableCrossNamespace` Helm value (`--enable-cross-namespace` flag), whose default will change from `true` to `false` in a future release. When disabled, `FieldExport` only operates within the **same namespace** as the source resource, which prevents users from exporting fields to namespaces they don't have access to.
+
+See [Breaking Changes](/breaking-changes) and the [Helm value reference](/guides/helm-values#cross-namespace-references) for details.
 
 ## Next Steps
 
